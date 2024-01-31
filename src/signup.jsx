@@ -16,7 +16,7 @@ function SignUp() {
             password: form.password.value,
         };
 
-        fetch('http://localhost:5000/signup', {
+        fetch('https://car-dealership-ip30.onrender.com/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
