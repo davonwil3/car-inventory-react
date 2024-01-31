@@ -1,7 +1,7 @@
 import { Navigate } from 'react-router-dom';
 
 const ProtectedRoute = ({ children }) => {
-    const isAuthenticated = localStorage.getItem('jwtToken'); // Adjust based on your auth logic
+    const isAuthenticated = localStorage.getItem('jwtToken'); 
 
     return isAuthenticated ? children : <Navigate to="/signin" />;
 };

@@ -10,6 +10,8 @@ function AddNewCar() {
 
     const getToken = () => localStorage.getItem('jwtToken');
 
+    /* clears the form and sets the message */
+
     function addCar(event) {
         event.preventDefault();
         const data = { make, model, year, color, price };
