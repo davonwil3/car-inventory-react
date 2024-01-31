@@ -19,7 +19,7 @@
                 password: form.password.value,
             };
             
-            fetch('http://localhost:5000/signin', {
+            fetch('https://car-dealership-ip30.onrender.com/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -27,6 +27,7 @@
                 body: JSON.stringify(data),
             }).then(response => response.json())
             .then(data => {
+                localStorage.removeItem('jwtToken');
                 saveToken(data.access_token);
                 console.log(data);
                 navigate('/dashboard'); 
