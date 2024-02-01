@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SignIn from './singnin';
+import SignIn from './signin';
 import Signup from './signup';
 import Dashboard from './dashboard';
 import ProtectedRoute from './protectedroute';
