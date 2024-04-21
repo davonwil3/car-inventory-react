@@ -7,6 +7,9 @@
 
         const navigate = useNavigate(); 
 
+        const [email, setEmail] = React.useState('adam@gmail.com');
+        const [password, setPassword] = React.useState('freshman2');
+
         const saveToken = (token) => {
             localStorage.setItem('jwtToken', token);
         };
@@ -43,9 +46,9 @@
                     <div id="sign-in" style={{marginBottom: "70px"}}>
                         <form  className='signin-form' onSubmit={handleSubmit}>
                             <label for="email">Email:</label><br />
-                            <input type="text" id="email" name="email"  /><br />
+                            <input type="text" value={email} id="email" name="email"  onChange={(e) => setEmail(e.target.value)}  /><br />
                             <label for="password" style={{marginTop: '30px'}}>Password:</label><br />
-                            <input type="password" id="password" name="password"  /><br /><br />
+                            <input type="password" value={password} id="password" name="password"  onChange={(e) => setPassword(e.target.value)} /><br /><br />
                             <input type="submit" value="Submit" />
                           
                         </form>
